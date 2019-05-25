@@ -13,7 +13,7 @@ function getJoke() {
     xhr.open(`GET`, url);
     xhr.addEventListener(`load`, function() {
         const response = JSON.parse(xhr.response);
-        paragraph.innerHTML = response.value.joke;
+        paragraph.innerText = response.value.joke;
     });
     xhr.send();
 }
